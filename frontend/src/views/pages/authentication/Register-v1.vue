@@ -1,22 +1,15 @@
 <template>
-  <div class="auth-wrapper auth-v1 px-2">
-    <div class="auth-inner py-2">
-
+   <b-row>
+    <b-col cols="12">
       <!-- Register v1 -->
       <b-card class="mb-0">
-        <b-link class="brand-logo">
-          <vuexy-logo />
-          <h2 class="brand-text text-primary ml-1">
-            Vuexy
-          </h2>
-        </b-link>
+       <b-link class="brand-logo">
+       <img src="https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg" alt="" width="150" height="150">
+      </b-link>
 
-        <b-card-title class="mb-1">
-          Adventure starts here 🚀
-        </b-card-title>
-        <b-card-text class="mb-2">
-          Make your app management easy and fun!
-        </b-card-text>
+  
+      
+       
 
         <!-- form -->
         <validation-observer ref="registerForm">
@@ -24,18 +17,23 @@
             class="auth-register-form mt-2"
             @submit.prevent="validationForm"
           >
+
+<b-row>
+  
+
+     <b-col cols="4">
             <!-- username -->
             <b-form-group
-              label="Username"
-              label-for="username"
+              label="First Name"
+              label-for="firstname"
             >
               <validation-provider
                 #default="{ errors }"
-                name="Username"
+                name="Firstname"
                 rules="required"
               >
                 <b-form-input
-                  id="username"
+                  id="firstname"
                   v-model="username"
                   :state="errors.length > 0 ? false:null"
                   name="register-username"
@@ -45,7 +43,209 @@
               </validation-provider>
             </b-form-group>
 
-            <!-- email -->
+    </b-col>
+
+      <b-col cols="4">
+            <!-- username -->
+            <b-form-group
+              label="Last Name"
+              label-for="lastname"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Lastname"
+                rules="required"
+              >
+                <b-form-input
+                  id="lastname"
+                  v-model="lastname"
+                  :state="errors.length > 0 ? false:null"
+                  name="register-lastname"
+                  placeholder="Last Name"
+                />
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+
+   <b-col cols="4">
+            <!-- username -->
+            <b-form-group
+              label="Nick Name"
+              label-for="nickname"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Nick Name"
+                rules="required"
+              >
+                <b-form-input
+                  id="nickname"
+                  v-model="nickname"
+                  :state="errors.length > 0 ? false:null"
+                  name="register-lastname"
+                  placeholder="Nick Name"
+                />
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+
+    
+   <b-col cols="4">
+            <!-- username -->
+            <b-form-group
+              label="Birth Date"
+              label-for="birthdate"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Birth Date"
+                rules="required"
+              >
+              
+                 <b-form-datepicker
+                   id="example-datepicker"
+                    v-model="birthdate"
+                    :state="errors.length > 0 ? false:null"
+
+                    class="mb-1"
+                  />
+                
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+
+
+   <b-col cols="4">
+            <!-- username -->
+            <b-form-group
+              label="Birth Place"
+              label-for="birthplace"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Birth Place"
+                rules="required"
+              >
+            <b-form-select
+              v-model="birthplace"
+              :options="options"
+              :state="errors.length > 0 ? false:null"
+            />
+                
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+    
+   <b-col cols="4">
+            <!-- username -->
+            <b-form-group
+              label="Baptism Date"
+              label-for="batptism"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Baptism Date"
+                rules="required"
+              >
+              
+                 <b-form-datepicker
+                   id="batptism"
+                    v-model="batptism"
+                    :state="errors.length > 0 ? false:null"
+
+                    class="mb-1"
+                  />
+                
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+
+    <b-col cols="6">
+            <!-- username -->
+            <b-form-group
+              label="Martial Status"
+              label-for="martial_status"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Martial Status"
+                rules="required"
+              >
+            <b-form-select
+              v-model="martial_status"
+              :options="gender_options"
+              :state="errors.length > 0 ? false:null"
+            />
+                
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+    
+    <b-col cols="6">
+            <!-- username -->
+            <b-form-group
+              label="Church Role"
+              label-for="churchRole"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Martial Status"
+                rules="required"
+              >
+            <b-form-select
+              v-model="churchRole"
+              :options="options"
+              :state="errors.length > 0 ? false:null"
+            />
+                
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+
+
+    <b-col cols="12">
+            <!-- username -->
+            <b-form-group
+              label="Mobile Phone  (Phone Mask) example +62 821 000000000"
+              label-for="mobile"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Mobile Phone"
+                rules="required"
+              >
+                <b-form-input
+                  id="mobile"
+                  v-model="mobile"
+                  :state="errors.length > 0 ? false:null"
+                  name="register-mobile"
+                  placeholder="(Phone Mask) example +62 821 000000000"
+                />
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+    
+    
+
+    <b-col cols="6">
+
+      <!-- email -->
             <b-form-group
               label="Email"
               label-for="email"
@@ -66,7 +266,11 @@
               </validation-provider>
             </b-form-group>
 
-            <!-- password -->
+
+    </b-col>
+
+    <b-col cols="6">
+       <!-- password -->
             <b-form-group
               label="Password"
               label-for="password"
@@ -87,7 +291,7 @@
                     :state="errors.length > 0 ? false:null"
                     class="form-control-merge"
                     name="register-password"
-                    placeholder="············"
+                    placeholder="Enter Your Password"
                   />
                   <b-input-group-append is-text>
                     <feather-icon
@@ -100,20 +304,141 @@
                 <small class="text-danger">{{ errors[0] }}</small>
               </validation-provider>
             </b-form-group>
+      </b-col>
 
-            <!-- checkbox -->
-            <b-form-group>
-              <b-form-checkbox
-                id="register-privacy-policy"
-                v-model="status"
-                name="checkbox-1"
+       <b-col cols="12">
+        <b-form-group
+              label="Address"
+              label-for="address"
+            >
+         <validation-provider
+                #default="{ errors }"
+                name="Address"
+                rules="required"
               >
-                I agree to
-                <b-link>privacy policy & terms</b-link>
-              </b-form-checkbox>
+        <b-form-textarea
+          id="textarea-auto-height"
+          placeholder="Address"
+          name="address"
+          rows="3"
+          max-rows="8"
+          class="mb-1 mb-xl-0"
+        />
+
+          <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+              </b-form-group>
+      </b-col>
+
+      
+  <b-col cols="6">
+            <!-- username -->
+            <b-form-group
+              label="City"
+              label-for="city"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="City"
+                rules="city"
+              >
+            <b-form-select
+              v-model="city"
+              :options="options"
+              :state="errors.length > 0 ? false:null"
+            />
+                
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
             </b-form-group>
 
-            <!-- submit button -->
+    </b-col>
+
+    <b-col cols="6">
+            <!-- username -->
+            <b-form-group
+              label="Country"
+              label-for="country"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Country"
+                rules="country"
+              >
+            <b-form-select
+              v-model="country"
+              :options="options"
+              :state="errors.length > 0 ? false:null"
+            />
+                
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+
+    
+
+    <b-col cols="6">
+            <!-- username -->
+            <b-form-group
+              label="Ministry"
+              label-for="ministry"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Ministry"
+                rules="ministry"
+              >
+            <b-form-select
+              v-model="ministry"
+              :options="options"
+              :state="errors.length > 0 ? false:null"
+            />
+                
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+
+
+     <b-col cols="6">
+            <!-- username -->
+            <b-form-group
+              label="Sunday Services"
+              label-for="sunday_services"
+            >
+              <validation-provider
+                #default="{ errors }"
+                name="Sunday Services"
+                rules="sunday_services"
+              >
+            <b-form-select
+              v-model="sunday_services"
+              :options="options"
+              :state="errors.length > 0 ? false:null"
+            />
+                
+                <small class="text-danger">{{ errors[0] }}</small>
+              </validation-provider>
+            </b-form-group>
+
+    </b-col>
+ <b-col cols="6">
+
+   <b-button
+              variant="danger"
+              block
+             :to="{name:'auth-login-v1'}"
+            >
+             Cancel
+            </b-button>
+
+   </b-col>
+  
+  <b-col cols="6">
+    <!-- submit button -->
             <b-button
               variant="primary"
               block
@@ -121,6 +446,17 @@
             >
               Sign up
             </b-button>
+     </b-col>
+
+</b-row>
+
+
+            
+           
+
+            
+
+           
           </b-form>
         </validation-observer>
 
@@ -166,26 +502,49 @@
         </div>
       </b-card>
     <!-- /Register v1 -->
-    </div>
-  </div>
+    </b-col>
+  </b-row>
 
 </template>
 
 <script>
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import {
-  BCard, BLink, BCardTitle, BCardText, BForm,
-  BButton, BFormInput, BFormGroup, BInputGroup, BInputGroupAppend, BFormCheckbox,
+  BCard,
+  BLink, 
+  BCardTitle,
+  BCardText, 
+  BForm,
+  BButton, 
+  BFormInput, 
+  BFormGroup, 
+  BInputGroup,
+  BInputGroupAppend,
+  BFormCheckbox,
+  BRow,
+  BFormFile,
+  BCol,
+  BFormDatepicker,
+  BFormSelect,
+  BFormTextarea
 } from 'bootstrap-vue'
 import VuexyLogo from '@core/layouts/components/Logo.vue'
 import { required, email } from '@validations'
 import { togglePasswordVisibility } from '@core/mixins/ui/forms'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
+import { FormWizard } from 'vue-form-wizard'
+
+
+
 
 export default {
   components: {
+    BRow,
+    BCol,
     VuexyLogo,
+    BFormTextarea,
     // BSV
+    BFormDatepicker,
     BCard,
     BLink,
     BCardTitle,
@@ -196,6 +555,8 @@ export default {
     BFormGroup,
     BInputGroup,
     BInputGroupAppend,
+    BFormFile,
+    BFormSelect,
     BFormCheckbox,
     // validations
     ValidationProvider,
@@ -206,12 +567,47 @@ export default {
     return {
       regEmail: '',
       username: '',
+      firstname: '',
+      lastname: '',
+      nickname: '',
+      mobile: '',
+      birthdate: '',
+      birthplace: '',
+      batptism: '',
+      martial_status: '',
+      churchRole: '',
+      sunday_services: '',
+      ministry: '',
+      address : '',
+      city : '',
+      country : '',
       password: '',
       status: '',
-
+      file: null,
       // validation rules
       required,
       email,
+      options: [
+        { value: "", text: 'Please select an option' },
+        { value: 'a', text: 'This is First option' },
+        { value: 'b', text: 'Simple Option' },
+        { value: { C: '3PO' }, text: 'This is an option with object value' },
+        { value: 'd', text: 'This one is disabled', disabled: true },
+      ],
+      gender_options: [
+        { value: "", text: 'Select Gender' },
+        { value: 'Male', text: 'Male' },
+        { value: 'Female', text: 'Female' }
+        
+      ],
+
+      mime_type: '',
+      cropedImage: '',
+      autoCrop: false,
+      selectedFile: '',
+      image: '',
+      dialog: false,
+      files: '',
     }
   },
   computed: {
@@ -233,6 +629,38 @@ export default {
           })
         }
       })
+    },
+
+     saveImage() {
+      const userId = this.$route.params.user_id
+      this.cropedImage = this.$refs.cropper.getCroppedCanvas().toDataURL()
+      this.$refs.cropper.getCroppedCanvas().toBlob((blob) => {
+        const formData = new FormData()
+        formData.append('profile_photo', blob, 'name.jpeg')
+        // axios
+        //   .post('/api/user/' + userId + '/profile-photo', formData)
+        //   .then((response) => {
+        //   })
+        //   .catch(function (error) {
+        //     console.log(error)
+        //   })
+      }, this.mime_type)
+    },
+     onFileSelect(e) {
+      const file = e.target.files[0]
+      this.mime_type = file.type
+      console.log(this.mime_type)
+      if (typeof FileReader === 'function') {
+        this.dialog = true
+        const reader = new FileReader()
+        reader.onload = (event) => {
+          this.selectedFile = event.target.result
+          this.$refs.cropper.replace(this.selectedFile)
+        }
+        reader.readAsDataURL(file)
+      } else {
+        alert('Sorry, FileReader API not supported')
+      }
     },
   },
 }
