@@ -1,18 +1,61 @@
 <template>
-   <b-row>
+<div>
+  <b-row>
     <b-col cols="12">
+      
       <!-- Register v1 -->
+        
       <b-card class="mb-0">
-       <b-link class="brand-logo">
-       <img src="https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg" alt="" width="150" height="150">
-      </b-link>
+
+<b-row>
+    <b-col cols="6">        
+      
+ <div class="upload-example">
+		<cropper
+			class="upload-example-cropper"
+			:src="image"
+      @change="onChange"
+    
+
+		/>
+		<div class="button-wrapper">
+			<span class="button" @click="$refs.file.click()">
+				<input type="file" ref="file" @change="loadImage($event)" accept="image/*">
+				Load image
+			</span>
+      	<span class="button" @click="reset()">
+			 
+         Reset Image
+			
+			</span>
+		</div>
+	</div>
+</b-col>  
+
+ <b-col cols="6">        
+      
+ <div class="upload-example">
+<preview
+		:width="300"
+		:height="300"
+		:image="result.image"
+		:coordinates="result.coordinates"
+	/>
+
+   </div>
+</b-col>  
+
+  </b-row>
+     
+
+       
 
   
       
        
 
-        <!-- form -->
-        <validation-observer ref="registerForm">
+ <!-- form -->
+ <validation-observer ref="registerForm">
           <b-form
             class="auth-register-form mt-2"
             @submit.prevent="validationForm"
@@ -450,14 +493,7 @@
 
 </b-row>
 
-
-            
-           
-
-            
-
-           
-          </b-form>
+    </b-form>
         </validation-observer>
 
         <b-card-text class="text-center mt-2">
@@ -467,47 +503,21 @@
           </b-link>
         </b-card-text>
 
-        <div class="divider my-2">
-          <div class="divider-text">
-            or
-          </div>
-        </div>
+       
 
         <!-- social buttons -->
-        <div class="auth-footer-btn d-flex justify-content-center">
-          <b-button
-            variant="facebook"
-            href="javascript:void(0)"
-          >
-            <feather-icon icon="FacebookIcon" />
-          </b-button>
-          <b-button
-            variant="twitter"
-            href="javascript:void(0)"
-          >
-            <feather-icon icon="TwitterIcon" />
-          </b-button>
-          <b-button
-            variant="google"
-            href="javascript:void(0)"
-          >
-            <feather-icon icon="MailIcon" />
-          </b-button>
-          <b-button
-            variant="github"
-            href="javascript:void(0)"
-          >
-            <feather-icon icon="GithubIcon" />
-          </b-button>
-        </div>
+    
       </b-card>
     <!-- /Register v1 -->
     </b-col>
   </b-row>
-
+</div>
 </template>
 
 <script>
+import { Cropper,	Preview } from 'vue-advanced-cropper'
+import 'vue-advanced-cropper/dist/style.css';
+
 import { ValidationProvider, ValidationObserver } from 'vee-validate'
 import {
   BCard,
@@ -540,6 +550,8 @@ import { FormWizard } from 'vue-form-wizard'
 export default {
   components: {
     BRow,
+    Cropper,
+    Preview,
     BCol,
     VuexyLogo,
     BFormTextarea,
@@ -565,6 +577,7 @@ export default {
   mixins: [togglePasswordVisibility],
   data() {
     return {
+      image: null,
       regEmail: '',
       username: '',
       firstname: '',
@@ -584,6 +597,10 @@ export default {
       password: '',
       status: '',
       file: null,
+      result: {
+				coordinates: null,
+				image: null
+			},
       // validation rules
       required,
       email,
@@ -605,8 +622,7 @@ export default {
       cropedImage: '',
       autoCrop: false,
       selectedFile: '',
-      image: '',
-      dialog: false,
+     dialog: false,
       files: '',
     }
   },
@@ -616,6 +632,12 @@ export default {
     },
   },
   methods: {
+    onChange({ coordinates, image }) {
+			this.result = {
+				coordinates,
+				image
+			};
+		},
     validationForm() {
       this.$refs.registerForm.validate().then(success => {
         if (success) {
@@ -630,42 +652,65 @@ export default {
         }
       })
     },
+    reset() {
+			this.image = null;
+		},
+		loadImage(event) {
+			// Reference to the DOM input element
+			var input = event.target;
+			// Ensure that you have a file before attempting to read it
+			if (input.files && input.files[0]) {
+				// create a new FileReader to read this image and convert to base64 format
+				var reader = new FileReader();
+				// Define a callback function to run, when FileReader finishes its job
+				reader.onload = (e) => {
+       
+					// Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
+					// Read image as base64 and set to imageData
+          this.image = e.target.result;
+             console.log("vvvvvvv",this.image);
+				};
+				// Start the reader job - read file as a data url (base64 format)
+				reader.readAsDataURL(input.files[0]);
+			}
+		},
 
-     saveImage() {
-      const userId = this.$route.params.user_id
-      this.cropedImage = this.$refs.cropper.getCroppedCanvas().toDataURL()
-      this.$refs.cropper.getCroppedCanvas().toBlob((blob) => {
-        const formData = new FormData()
-        formData.append('profile_photo', blob, 'name.jpeg')
-        // axios
-        //   .post('/api/user/' + userId + '/profile-photo', formData)
-        //   .then((response) => {
-        //   })
-        //   .catch(function (error) {
-        //     console.log(error)
-        //   })
-      }, this.mime_type)
-    },
-     onFileSelect(e) {
-      const file = e.target.files[0]
-      this.mime_type = file.type
-      console.log(this.mime_type)
-      if (typeof FileReader === 'function') {
-        this.dialog = true
-        const reader = new FileReader()
-        reader.onload = (event) => {
-          this.selectedFile = event.target.result
-          this.$refs.cropper.replace(this.selectedFile)
-        }
-        reader.readAsDataURL(file)
-      } else {
-        alert('Sorry, FileReader API not supported')
-      }
-    },
+     
+    
   },
 }
 </script>
 
 <style lang="scss">
+.upload-example-cropper {
+	border: solid 1px #EEE;
+	height: 300px;
+	width: 100%;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 17px;
+}
+
+.button {
+	color: white;
+	font-size: 16px;
+	padding: 10px 20px;
+	background: #3fb37f;
+	cursor: pointer;
+  transition: background 0.5s;
+  margin-left: 12px;
+}
+
+.button:hover {
+	background: #38d890;
+}
 @import '@core/scss/vue/pages/page-auth.scss';
+
+
+.button input {
+	display: none;
+}
 </style>

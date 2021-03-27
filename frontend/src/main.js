@@ -23,6 +23,7 @@ import '@/libs/tour'
 // Axios Mock Adapter
 import '@/@fake-db/db'
 
+
 // BSV Plugin Registration
 Vue.use(ToastPlugin)
 Vue.use(ModalPlugin)
@@ -48,3 +49,5 @@ new Vue({
   i18n,
   render: h => h(App),
 }).$mount('#app')
+
+
