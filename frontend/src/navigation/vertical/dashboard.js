@@ -5,6 +5,11 @@ export default [
     tag: '2',
     tagVariant: 'light-warning',
     children: [
+
+      {
+        title: 'Dashboard',
+        route: 'dashboard-main',
+      },
       {
         title: 'eCommerce',
         route: 'dashboard-ecommerce',
