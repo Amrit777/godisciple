@@ -32,72 +32,70 @@
      <div class="grid-container">
 
      <div class="flex_col">
-      <b-card>
 
         <div class="video-container">
 
           <b-img
           :src="require('@/assets/images/slider/01.jpg')"
-          :width="100"   
+          :width="75"   
+          class="width-size"
         
 
           />
           <span class="video_title">video</span>
         </div>
 
-      </b-card>
+    
       
       </div>
 
         <div class="flex_col">
-      <b-card>
+  
 
         <div class="video-container">
 
           <b-img
           :src="require('@/assets/images/slider/01.jpg')"
+          :width="75" 
+          class="width-size"  
+          />
+     <span class="video_title">video</span>
 
-        :width="100"   
-        
+        </div>
+
+     
+      
+      </div>
+
+
+        <div class="flex_col">
+
+        <div class="video-container">
+
+          <b-img
+          :src="require('@/assets/images/slider/01.jpg')"
+        :width="75"   
+        class="width-size"
 
           />
                     <span class="video_title">video</span>
 
         </div>
 
-      </b-card>
-      
-      </div>
-
-
-        <div class="flex_col">
-      <b-card>
-
-        <div class="video-container">
-
-          <b-img
-          :src="require('@/assets/images/slider/01.jpg')"
-        :width="100"   
-        
-
-          />
-                    <span class="video_title">video</span>
-
-        </div>
-
-      </b-card>
+     
       
       </div>
 
 
    <div class="flex_col">
-      <b-card>
+  
 
         <div class="video-container">
 
           <b-img
           :src="require('@/assets/images/slider/01.jpg')"
-        :width="100"   
+        :width="75"   
+        class="width-size"
         
 
           />
@@ -105,10 +103,45 @@
 
         </div>
 
-      </b-card>
       
       </div>
 
+ <div class="flex_col">
+  
+
+        <div class="video-container">
+
+          <b-img
+          :src="require('@/assets/images/slider/01.jpg')"
+        :width="75"   
+        class="width-size"
+        
+
+          />
+                    <span class="video_title">video</span>
+
+        </div>
+
+      
+      </div>
+       <div class="flex_col">
+  
+
+        <div class="video-container">
+
+          <b-img
+          :src="require('@/assets/images/slider/01.jpg')"
+        :width="75"   
+        class="width-size"
+        
+
+          />
+                    <span class="video_title">video</span>
+
+        </div>
+
+      
+      </div>
 
       </div>
       
@@ -170,14 +203,16 @@ export default {
 }
 
 .flex_col{
-  flex:50%;
+  flex:25%;
 }
 
 span.video_title {
-     margin: 0px 30px;
+     margin: 0px 19px;
     display: inline-block;
     text-decoration: none;
     color: black;
 }
+
+
 
 </style>
