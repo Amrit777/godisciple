@@ -5,7 +5,7 @@ export default [
     component: () => import('@/views/apps/calendar/Calendar.vue'),
   },
 
-  // *===============================================---*
+  // *===============================================--r-*
   // *--------- EMAIL & IT'S FILTERS N LABELS -------------------------------*
   // *===============================================---*
   {
@@ -221,4 +221,25 @@ export default [
     name: 'apps-invoice-edit',
     component: () => import('@/views/apps/invoice/invoice-edit/InvoiceEdit.vue'),
   },
+
+  
+  // *===============================================---*
+  // *--------- invite ---- ---------------------------------------*
+  // *===============================================---*
+  {
+    path: '/apps/invite/list',
+    name: 'apps-invite-list',
+    component: () => import('@/views/apps/invite/users-list/UsersList.vue'),
+  },
+  {
+    path: '/apps/invite/view/:id',
+    name: 'apps-invite-view',
+    component: () => import('@/views/apps/invite/users-view/UsersView.vue'),
+  },
+  {
+    path: '/apps/invite',
+    name: 'apps-invite-request',
+    component: () => import('@/views/apps/invite/users-edit/Invite.vue'),
+  },
+
 ]

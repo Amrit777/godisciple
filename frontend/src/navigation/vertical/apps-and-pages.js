@@ -2,11 +2,24 @@ export default [
   {
     header: 'Apps & Pages',
   },
+  
+  {
+    title: 'Invite',
+    icon: 'UserIcon',
+    children: [
+      {
+        title: 'List',
+        route: 'apps-invite-list',
+      },
+      
+    ],
+  },
   {
     title: 'Email',
     route: 'apps-email',
     icon: 'MailIcon',
   },
+  
   {
     title: 'Chat',
     route: 'apps-chat',
@@ -68,7 +81,7 @@ export default [
   },
   {
     title: 'User',
-    icon: 'UserIcon',
+    icon: 'GiftIcon',
     children: [
       {
         title: 'List',
@@ -84,6 +97,7 @@ export default [
       },
     ],
   },
+
   {
     title: 'Pages',
     icon: 'FileIcon',

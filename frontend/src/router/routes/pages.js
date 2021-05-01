@@ -38,13 +38,32 @@ export default [
   {
     path: '/register',
     name: 'auth-register',
-    component: () => import('@/views/pages/authentication/Register.vue'),
+ //   component: () => import('@/views/pages/authentication/Register.vue'),
+
+    component: () => import('@/views/pages/authentication/Register-v1.vue'),
+  
     meta: {
       layout: 'full',
       resource: 'Auth',
       redirectIfLoggedIn: true,
     },
   },
+
+  {
+    path: '/invite/:token',
+    name: 'auth-invite',
+ //   component: () => import('@/views/pages/authentication/Register.vue'),
+
+    component: () => import('@/views/pages/authentication/Invite.vue'),
+  
+    meta: {
+      layout: 'full',
+      resource: 'Auth',
+      redirectIfLoggedIn: true,
+    },
+  },
+
+
   {
     path: '/pages/authentication/register-v1',
     name: 'auth-register-v1',
