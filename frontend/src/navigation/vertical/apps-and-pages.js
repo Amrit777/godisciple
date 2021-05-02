@@ -3,10 +3,33 @@ export default [
     header: 'Apps & Pages',
   },
   {
+    title: 'Dtree',
+    icon: 'MenuIcon',
+    children: [
+      {
+        title: 'List',
+        route: 'apps-menu-home',
+      },
+      
+    ],
+  },
+  {
+    title: 'Invite',
+    icon: 'UserIcon',
+    children: [
+      {
+        title: 'Menu',
+        route: 'apps-invite-list',
+      },
+      
+    ],
+  },
+  {
     title: 'Email',
     route: 'apps-email',
     icon: 'MailIcon',
   },
+  
   {
     title: 'Chat',
     route: 'apps-chat',
@@ -68,7 +91,7 @@ export default [
   },
   {
     title: 'User',
-    icon: 'UserIcon',
+    icon: 'GiftIcon',
     children: [
       {
         title: 'List',
@@ -84,6 +107,7 @@ export default [
       },
     ],
   },
+
   {
     title: 'Pages',
     icon: 'FileIcon',

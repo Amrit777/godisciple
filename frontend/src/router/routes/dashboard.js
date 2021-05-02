@@ -9,4 +9,10 @@ export default [
     name: 'dashboard-ecommerce',
     component: () => import('@/views/dashboard/ecommerce/Ecommerce.vue'),
   },
+
+  {
+    path: '/dashboard',
+    name: 'dashboard-main',
+    component: () => import('@/views/dashboard/main/Dashboard.vue'),
+  },
 ]
