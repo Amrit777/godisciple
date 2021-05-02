@@ -242,4 +242,24 @@ export default [
     component: () => import('@/views/apps/invite/users-edit/Invite.vue'),
   },
 
+   // *===============================================---*
+  // *--------- DTREE ---- ---------------------------------------*
+  // *===============================================---*
+  {
+    path: '/dahsboard/menu/home',
+    name: 'apps-menu-home',
+    component: () => import('@/views/dashboard/menu/Menu.vue'),
+  },
+  {
+    path: '/dahsboard/dtree/view',
+    name: 'apps-menu-view',
+    component: () => import('@/views/dashboard/menu/DtreeView.vue'),
+  },
+  {
+    path: '/dahsboard/dtree/list',
+    name: 'apps-menu-list',
+    component: () => import('@/views/dashboard/menu/DtreeList.vue'),
+  },
+
+
 ]

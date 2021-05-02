@@ -2,13 +2,23 @@ export default [
   {
     header: 'Apps & Pages',
   },
-  
+  {
+    title: 'Dtree',
+    icon: 'MenuIcon',
+    children: [
+      {
+        title: 'List',
+        route: 'apps-menu-home',
+      },
+      
+    ],
+  },
   {
     title: 'Invite',
     icon: 'UserIcon',
     children: [
       {
-        title: 'List',
+        title: 'Menu',
         route: 'apps-invite-list',
       },
       
