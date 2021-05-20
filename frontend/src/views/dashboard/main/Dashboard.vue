@@ -2,152 +2,49 @@
   <section id="dashboard-analytics">
     <b-row >
       <b-col
-        lg="6"
-        md="6"
+        md="12"
+      
       >
           <carousel-vsupport />
       </b-col>
       <b-col
-        lg="6"
-        sm="6 "
+       
+        md="12"
       >
 
-      <div class="category-slider">
-
-        <carousel-interval/>
+      <carousel-interval/>
         
-      </div>
-       
+   
       </b-col>
 
        <b-col
         lg="12"
         sm="12"
-        class="menu-list"
-      >
-      <b-card
-      
-      title="Video"
       >
 
-     <div class="grid-container">
+      <b-row>
+       <b-col
+        lg="3"
+        sm="3"
+        class="add-margin"
+      >
 
-     <div class="flex_col">
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/blog.jpg"  class="classWithPad">
+       </b-col>
 
-        <div class="video-container">
 
-          <b-img
-          :src="require('@/assets/images/slider/01.jpg')"
-          :width="75"   
-          class="width-size"
-        
+        <b-col
+        lg="3"
+        sm="3"
+        class="add-margin"
+      >
 
-          />
-          <span class="video_title">video</span>
-        </div>
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/instagram.jpg" class="classWithPad">
+       </b-col>
 
     
+      </b-row>
       
-      </div>
-
-        <div class="flex_col">
-  
-
-        <div class="video-container">
-
-          <b-img
-          :src="require('@/assets/images/slider/01.jpg')"
-          :width="75" 
-          class="width-size"  
-          />
-     <span class="video_title">video</span>
-
-        </div>
-
-     
-      
-      </div>
-
-
-        <div class="flex_col">
-
-        <div class="video-container">
-
-          <b-img
-          :src="require('@/assets/images/slider/01.jpg')"
-        :width="75"   
-        class="width-size"
-
-          />
-                    <span class="video_title">video</span>
-
-        </div>
-
-     
-      
-      </div>
-
-
-   <div class="flex_col">
-  
-
-        <div class="video-container">
-
-          <b-img
-          :src="require('@/assets/images/slider/01.jpg')"
-        :width="75"   
-        class="width-size"
-        
-
-          />
-                    <span class="video_title">video</span>
-
-        </div>
-
-      
-      </div>
-
- <div class="flex_col">
-  
-
-        <div class="video-container">
-
-          <b-img
-          :src="require('@/assets/images/slider/01.jpg')"
-        :width="75"   
-        class="width-size"
-        
-
-          />
-                    <span class="video_title">video</span>
-
-        </div>
-
-      
-      </div>
-       <div class="flex_col">
-  
-
-        <div class="video-container">
-
-          <b-img
-          :src="require('@/assets/images/slider/01.jpg')"
-        :width="75"   
-        class="width-size"
-        
-
-          />
-                    <span class="video_title">video</span>
-
-        </div>
-
-      
-      </div>
-
-      </div>
-      
-
-      </b-card>
        
       </b-col>
      
@@ -234,5 +131,9 @@ span.video_title {
 }
 
 
+
+.add-margin{
+margin:25px;
+}
 
 </style>

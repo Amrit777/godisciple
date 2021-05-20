@@ -43,8 +43,8 @@
         <!-- Skin -->
         <b-form-group label="Skin">
           <b-form-radio-group
-            id="skin-radio-group"
-            v-model="skin"
+            id="skin-radio-group" 
+            v-model="dark"
             name="skin"
             :options="skinOptions"
           />
