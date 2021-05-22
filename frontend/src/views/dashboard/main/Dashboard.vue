@@ -42,6 +42,16 @@
        <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/instagram.jpg" class="classWithPad">
        </b-col>
 
+        <b-col
+        lg="3"
+        sm="3"
+        class="add-margin"
+      >
+
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/instagram.jpg" class="classWithPad">
+       </b-col>
+
+
     
       </b-row>
       

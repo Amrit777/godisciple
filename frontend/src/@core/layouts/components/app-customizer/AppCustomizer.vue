@@ -198,6 +198,13 @@ export default {
     VuePerfectScrollbar,
 
   },
+
+  data(){
+
+   color:"dark",
+
+
+  }
   setup() {
     const {
       // Vertical Menu
