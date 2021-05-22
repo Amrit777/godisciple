@@ -15,13 +15,14 @@
         <b-carousel-slide  >
 
         <template #img>
-            <img
-              class="d-block img-fluid w-100  revolution-slider-height  "
-              width="924"
-              height="380"
-              :src="image2"
-              alt="image slot"
-            >
+           
+
+            <video  width="924"
+              height="380" controls src="http://e14aaeb709f7cde1ae68-a1d0a134a31b545b257b15f8a8ba5726.r70.cf3.rackcdn.com/projects/31432/1427815464209-bf74131a7528d0ea5ce8c0710f530bb5/1280x720.mp4" type="video/mp4">
+ 
+            </video>
+
+
           </template>
 
          </b-carousel-slide>

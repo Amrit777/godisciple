@@ -13,7 +13,18 @@
         class="secondary-small-carousel"
       >
 
-      <carousel-interval/>
+      <div>
+    <VueSlickCarousel v-bind="settings">
+      <div> <img alt="" title="" height="300"  src="http://www.abfoodnutrition.co.uk/wp-content/uploads/2015/02/Small-Business-Saturday-UK-Facebook-Banner-2015.jpg"  class="classWithPad">
+      </div>
+      <div> <img alt="" title="" height="300" src="https://godisciples.id/menu/assets/images/faq.png"  class="classWithPad">
+        </div>
+
+        <div> <img alt="" title="" height="300"  src="https://godisciples.id/menu/assets/images/faq.png"  class="classWithPad">
+        </div>
+    
+    </VueSlickCarousel>
+  </div>
 
 
       </b-col>
@@ -23,6 +34,10 @@
         sm="12" class="image-video-listing"
       >
 
+ <b-card
+      
+      title="Menu"
+      >
       <b-row>
        <b-col
         lg="3"
@@ -45,6 +60,8 @@
 
       </b-row>
 
+ </b-card>
+
 
       </b-col>
 
@@ -58,6 +75,9 @@ import { BRow, BCol,BCard,BImg } from 'bootstrap-vue'
 import CarouselVsupport from './CarouselVsupport.vue';
 
 import CarouselInterval from './CarouselInterval.vue';
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 
 
@@ -68,7 +88,8 @@ export default {
     CarouselVsupport,
     CarouselInterval,
     BCard,
-    BImg
+    BImg,
+    VueSlickCarousel 
   },
   data() {
     return {
@@ -77,6 +98,18 @@ export default {
         image1:require('@/assets/images/slider/01.jpg'),
 
       },
+      settings:{
+  "dots": false,
+  "infinite": true,
+  "centerMode": true,
+  "centerPadding": "20px",
+  "slidesToShow": 1,
+  "slidesToScroll": 1,
+  "variableWidth": true,
+    prevArrow: false,
+    nextArrow: false
+}
+      
     }
   },
   created() {
@@ -258,6 +291,10 @@ section#dashboard-analytics .main-carousel .carousel-inner .carousel-item {borde
       left: 50%;
       transform: translate(-50%, -50%);
   }
+}
+
+button.slick-arrow {
+    display: none !important;
 }
 
 
