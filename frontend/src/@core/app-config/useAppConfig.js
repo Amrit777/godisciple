@@ -28,7 +28,7 @@ export default function usAppConfig() {
   const skin = computed({
     get: () => store.state.appConfig.layout.skin,
     set: val => {
-      store.commit('appConfig/UPDATE_SKIN', val)
+      store.commit('appConfig/UPDATE_SKIN', "dark")
     },
   })
 

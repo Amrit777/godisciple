@@ -44,7 +44,7 @@
         <b-form-group label="Skin">
           <b-form-radio-group
             id="skin-radio-group" 
-            v-model="dark"
+            v-model="skin"
             name="skin"
             :options="skinOptions"
           />
@@ -199,12 +199,7 @@ export default {
 
   },
 
-  data(){
-
-   color:"dark",
-
-
-  }
+ 
   setup() {
     const {
       // Vertical Menu
