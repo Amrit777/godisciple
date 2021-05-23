@@ -3,21 +3,12 @@
     <b-row >
 
           <!-- Search -->
-          <b-col
-            cols="8"
-            md="6"
-          >
-           
+          <div class="search-bar-card">
               <b-form-input
                
                 class="d-inline-block mr-1"
                 placeholder="Search Role"
               />
-          </b-col>
-           <b-col
-            cols="4"
-            md="6"
-          >
            <div class="button-wrapper"   @click="$router.push({name:'apps-invite-request'})">
               <b-button
                 variant="primary"
@@ -29,7 +20,7 @@
               </div>
             
            
-          </b-col>
+          </div>
 
 
 

@@ -1,13 +1,15 @@
 <template>
 <div>
-  <b-row>
+  <b-row class="registeration-form">
+
     <b-col cols="12">
       
       <!-- Register v1 -->
         
       <b-card class="mb-0">
+      <h2 class="top-heading">Register</h2>
 
-<b-row>
+<b-row class="image-uploading">
     <b-col cols="6">        
       
  <div class="upload-example">
@@ -213,7 +215,7 @@
 
     </b-col>
 
-    <b-col cols="6">
+    <b-col cols="4">
             <!-- username -->
             <b-form-group
               label="Martial Status"
@@ -236,7 +238,7 @@
 
     </b-col>
     
-    <b-col cols="6">
+    <b-col cols="4">
             <!-- username -->
             <b-form-group
               label="Church Role"
@@ -260,7 +262,7 @@
     </b-col>
 
 
-    <b-col cols="12">
+    <b-col cols="4">
             <!-- username -->
             <b-form-group
               label="Mobile Phone  (Phone Mask) example +62 821 000000000"
@@ -349,7 +351,8 @@
             </b-form-group>
       </b-col>
 
-       <b-col cols="12">
+          <b class="label-title">Address</b>
+       <b-col cols="12" class="address-field">
         <b-form-group
               label="Address"
               label-for="address"
