@@ -635,3 +635,187 @@ body {
     }
   }
 }
+
+
+section#dashboard-analytics .main-carousel .carousel-item {
+    height: 300px;
+    border-radius: 0.428rem;
+    overflow:hidden;
+}
+
+section#dashboard-analytics .main-carousel .carousel-item video {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+.secondary-small-carousel .slick-slide {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 10px;
+    max-height: 300px;
+}
+
+.secondary-small-carousel .slick-slide img {
+    border-radius: 0.428rem;
+    max-height:180px;
+} 
+
+.image-video-listing {
+    margin-top: 30px !important;
+}
+
+
+section#dashboard-analytics .row {
+    flex-wrap: inherit;
+    display: inherit;
+}
+
+.image-video-listing .list-carding {
+    float: left !important;
+}
+
+.creditcard-custom .card-item {
+    margin: 0 auto;
+}
+
+.creditcard-custom .card-form {
+    max-width: initial;
+    display: inline-block;
+}
+
+.creditcard-custom .card-list {
+    margin: 0;
+}
+
+.creditcard-custom .wrapper {
+    padding: 0 15px;
+    max-width: 510px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.creditcard-custom .card-item .card-item__side.-front {
+    max-width: 430px;
+    width: 100%;
+}
+
+section.visibility-card .tab-section ul.nav {border-bottom: 4px solid #dddddd26;margin:20px 0;border-radius: 0;justify-content: center;position: relative;}
+
+section.visibility-card .tab-section ul.nav a.nav-link span {
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+section.visibility-card .tab-section ul.nav a.nav-link {
+    width: auto;
+    padding: 13px 50px;
+    background: transparent !important;
+    color: #666;
+    border: navajowhite;
+    box-shadow: none;
+    position:relative;
+    transition:0.4s ease-in-out;
+}
+
+section.visibility-card .tab-section ul.nav li.nav-item {
+    width: auto;
+    display: inline-block;
+}
+
+section.visibility-card .tab-section ul.nav a.nav-link.active,section.visibility-card .tab-section ul.nav a.nav-link:hover {
+    border-radius: 0;
+    position: relative;
+    color:#7367f0;
+}
+
+section.visibility-card .tab-section ul.nav a.nav-link:before {content: '';border-bottom: 4px solid #7367f0;transition:0.4s ease-in-out;position: absolute;width: 100%;bottom: -4px;opacity:0;}
+
+section.visibility-card .tab-section ul.nav a.nav-link.active:before ,section.visibility-card .tab-section ul.nav a.nav-link:hover:before {opacity:1;}
+
+section.visibility-card 
+ .tab-content {
+    padding: 30px 0px 0;
+}
+section.visibility-card .tab-content section#card-view {
+    float: left;
+    width: 100%;
+    text-align:center;
+}
+
+section.visibility-card .tab-content section#card-view .row.match-height {
+    display: inline-block;
+    width: 33.33%;
+    flex: none;
+    margin: 0;
+    flex-wrap: inherit;
+}
+
+section.visibility-card .tab-content section#card-view .row.match-height .col-md-6 {
+    display: inline-block;
+    flex: none;
+    max-width: 100%;
+}
+
+section.visibility-card  section#card-view .card-details {
+    margin: 0;
+    padding: 20px;
+}
+
+section.visibility-card section#card-view .card-details p.card-text.make-bold {
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+section.visibility-card section#card-view .card-details p {
+    line-height: 25px;
+}
+
+section.visibility-card section#card-view .card-details button {
+    margin-top: 15px;
+    width: 100%;
+    background: #7367f0;
+    color: #fff;
+    transition: 0.4s ease-in-out;
+    border-weight:2px;
+}
+
+section.visibility-card section#card-view .card-details button:hover {
+    color: #7367f0;
+    background: transparent;
+}
+
+section.visibility-card section#card-view .card-details button.member-view {
+    background: transparent;
+    color: #7367f0;
+}
+
+section.visibility-card section#card-view .card-details button.member-view:hover {
+    background: #7367f0;
+    color: #fff;
+}
+
+@media only screen and (max-width: 1024px) {
+	section.visibility-card .tab-content section#card-view .row.match-height {width:49%;}
+}
+
+
+@media only screen and (max-width: 767px) {
+	section#dashboard-analytics .main-carousel .carousel-item {height:180px;}
+	section#dashboard-analytics .main-carousel .carousel-inner .carousel-item img {height: 100%;}
+	section#dashboard-analytics .main-carousel .carousel-item img {height:100%;}
+	.secondary-small-carousel .slick-slide img {height:110px;}
+	.secondary-small-carousel .slick-track { max-height: 110px; overflow: hidden;}
+	.secondary-small-carousel .slick-track {max-height: 110px;overflow: hidden;}
+	.secondary-small-carousel .slick-slide {padding:0 5px;}
+	section.visibility-card .tab-content section#card-view .row.match-height {width:100%;}
+}
+
+
+@media only screen and (max-width: 480px) {
+	.creditcard-custom .card-list .card-item {max-width: 430px;width: 100%;}
+	.creditcard-custom .wrapper {padding:0;}
+}

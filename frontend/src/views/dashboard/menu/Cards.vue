@@ -56,14 +56,14 @@
           </p>
 
 
-        <b-button
+        <b-button class="edit"
           v-ripple.400="'rgba(113, 102, 240, 0.15)'"
           variant="outline-primary"
         >
           Edit Profile
         </b-button>
 
-         <b-button
+         <b-button class="member-view"
           v-ripple.400="'rgba(113, 102, 240, 0.15)'"
           variant="outline-primary"
         >

@@ -3,7 +3,7 @@
     <b-row>
       <b-col lg="3" md="3"></b-col>
 
-      <b-col lg="6" md="6">
+      <b-col lg="6" md="6"  class="creditcard-custom">
         <div class="wrapper">
           <div class="card-form">
             <div class="card-list">

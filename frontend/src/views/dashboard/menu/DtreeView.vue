@@ -1,5 +1,5 @@
 <template>
-  <section id="dashboard-menu">
+  <section id="dashboard-menu" class="visibility-card">
     <b-row >
 
           <!-- Search -->
