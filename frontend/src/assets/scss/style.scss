@@ -661,7 +661,7 @@ section#dashboard-analytics .main-carousel .carousel-item video {
 .secondary-small-carousel .slick-slide img {
     border-radius: 0.428rem;
     max-height:180px;
-} 
+}
 
 .image-video-listing {
     margin-top: 30px !important;
@@ -735,7 +735,7 @@ section.visibility-card .tab-section ul.nav a.nav-link:before {content: '';borde
 
 section.visibility-card .tab-section ul.nav a.nav-link.active:before ,section.visibility-card .tab-section ul.nav a.nav-link:hover:before {opacity:1;}
 
-section.visibility-card 
+section.visibility-card
  .tab-content {
     padding: 30px 0px 0;
 }
@@ -818,4 +818,8 @@ section.visibility-card section#card-view .card-details button.member-view:hover
 @media only screen and (max-width: 480px) {
 	.creditcard-custom .card-list .card-item {max-width: 430px;width: 100%;}
 	.creditcard-custom .wrapper {padding:0;}
+}
+
+.button-wrapper-center{
+    text-align: center;
 }
