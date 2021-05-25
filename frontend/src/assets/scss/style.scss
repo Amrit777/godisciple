@@ -798,8 +798,81 @@ section.visibility-card section#card-view .card-details button.member-view:hover
     color: #fff;
 }
 
+section.visibility-card .search-bar-card {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+}
+
+section.visibility-card .search-bar-card input {width: calc(100% - 140px);}
+
+section.visibility-card .search-bar-card .button-wrapper {
+    width: 120px;
+    float: right;
+}
+
+section.visibility-card .search-bar-card .button-wrapper button {
+    width: 100%;
+    display: inline-block;
+    float: left;
+}
+
+.registeration-form .card-body {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.registeration-form .card-body input, .registeration-form .card-body textarea, .registeration-form .card-body select,.b-form-btn-label-control.form-control > label {
+    min-height: 46px;
+}
+
+.registeration-form {
+    float: left;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.registeration-form .col-12 {
+    padding: 0;
+}
+
+.registeration-form .address-field {
+    padding: 0 1rem !important;
+}
+
+.registeration-form .address-field textarea {
+    overflow-y: auto !important;
+}
+
+b.label-title {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0px 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #d0d2d6;
+    position: relative;
+}
+
+b.label-title:before {content: '';position: absolute;width: 43%;left: 1rem;height: 1px;top: 50%;background: #d0d2d6;}
+
+b.label-title:after {content: '';position: absolute;width: 43%;right: 1rem;height: 1px;top: 50%;background: #d0d2d6;}
+
+h2.top-heading {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #fff;
+}
+
 @media only screen and (max-width: 1024px) {
 	section.visibility-card .tab-content section#card-view .row.match-height {width:49%;}
+	.registeration-form .card-body { max-width:767px; padding:30px 15px}
+	.registeration-form form.auth-register-form .col-4,.registeration-form form.auth-register-form .col-6 ,.registeration-form .col-6 {max-width: 50%;flex: none;}
 }
 
 
@@ -812,14 +885,18 @@ section.visibility-card section#card-view .card-details button.member-view:hover
 	.secondary-small-carousel .slick-track {max-height: 110px;overflow: hidden;}
 	.secondary-small-carousel .slick-slide {padding:0 5px;}
 	section.visibility-card .tab-content section#card-view .row.match-height {width:100%;}
+	.image-video-listing .list-carding img.classWithPad {width: 100%;}
+	.registeration-form form.auth-register-form .col-4,.registeration-form form.auth-register-form .col-6 ,.registeration-form .col-6 {max-width: 100%;flex: none;}
+	b.label-title:before ,b.label-title:after {width:37%;}
+	.registeration-form form.auth-register-form a.btn,.registeration-form form.auth-register-form button.btn {margin-bottom: 10px;min-height: 40px;line-height: 15px;}
 }
 
 
 @media only screen and (max-width: 480px) {
 	.creditcard-custom .card-list .card-item {max-width: 430px;width: 100%;}
 	.creditcard-custom .wrapper {padding:0;}
-}
-
-.button-wrapper-center{
-    text-align: center;
+	.secondary-small-carousel .slick-slide {max-width:260px;height:100px;}
+	.secondary-small-carousel .slick-slide img{width:100%;height:100px;}
+	section.visibility-card .tab-section ul.nav a.nav-link {padding:13px 30px;}
+	b.label-title:before ,b.label-title:after {width:32%;}
 }

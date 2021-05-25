@@ -2,10 +2,8 @@
   <section id="dashboard-menu" class="visibility-card">
     <b-row>
       <!-- Search -->
-      <b-col cols="8" md="6">
+      <div class="search-bar-card">
         <b-form-input class="d-inline-block mr-1" placeholder="Search Role" />
-      </b-col>
-      <b-col cols="4" md="6">
         <div
           class="button-wrapper"
           @click="$router.push({ name: 'apps-invite-request' })"
@@ -14,7 +12,7 @@
             <span class="text-nowrap">Search</span>
           </b-button>
         </div>
-      </b-col>
+      </div>
 
       <b-col md="12">
         <component :is="'div'" class="tab-section">
@@ -32,7 +30,6 @@
               <template #title>
                 <span class="tab-title-custom">Tree View</span>
               </template>
-
               <table-tree />
             </b-tab>
           </b-tabs>
