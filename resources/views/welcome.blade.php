@@ -128,5 +128,9 @@
                 </div>
             </div>
         </div>
+        <script>
+
+            localStorage.setItem('vuexy-skin','dark');
+            </script>
     </body>
 </html>

@@ -20,7 +20,10 @@
   </noscript>
   <div id="app">
   </div>
+  <script>
 
+      localStorage.setItem('vuexy-skin','dark');
+      </script>
   <script src="{{ asset(mix('js/app.js')) }}"></script>
 
 </body>
