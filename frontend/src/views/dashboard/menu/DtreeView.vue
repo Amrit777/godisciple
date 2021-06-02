@@ -161,4 +161,9 @@ span.video_title {
 .tab-title-custom {
   font-size: 10px;
 }
+
+.row {
+   
+    border: none;
+}
 </style>

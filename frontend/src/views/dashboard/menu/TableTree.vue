@@ -101,11 +101,6 @@
 </script>
 
 <style scoped>
-  .table{
-    width: 60%;
-    margin: auto;
-  }
-  .setname{
-    color:aqua;
-  }
+ 
+  
 </style>
