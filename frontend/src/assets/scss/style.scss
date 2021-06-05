@@ -881,8 +881,7 @@ h2.top-heading {
 	section#dashboard-analytics .main-carousel .carousel-inner .carousel-item img {height: 100%;}
 	section#dashboard-analytics .main-carousel .carousel-item img {height:100%;}
 	.secondary-small-carousel .slick-slide img {height:110px;}
-	.secondary-small-carousel .slick-track { max-height: 110px; overflow: hidden;}
-	.secondary-small-carousel .slick-track {max-height: 110px;overflow: hidden;}
+	.secondary-small-carousel .slick-track { max-height: 130px; overflow: hidden;}
 	.secondary-small-carousel .slick-slide {padding:0 5px;}
 	section.visibility-card .tab-content section#card-view .row.match-height {width:100%;}
 	.image-video-listing .list-carding img.classWithPad {width: 100%;}
@@ -895,8 +894,8 @@ h2.top-heading {
 @media only screen and (max-width: 480px) {
 	.creditcard-custom .card-list .card-item {max-width: 430px;width: 100%;}
 	.creditcard-custom .wrapper {padding:0;}
-	.secondary-small-carousel .slick-slide {max-width:260px;height:100px;}
-	.secondary-small-carousel .slick-slide img{width:100%;height:100px;}
+	.secondary-small-carousel .slick-slide {max-width:350px;height:100px;}
+	.secondary-small-carousel .slick-slide img{width:100%;height:130px;}
 	section.visibility-card .tab-section ul.nav a.nav-link {padding:13px 30px;}
 	b.label-title:before ,b.label-title:after {width:32%;}
 }

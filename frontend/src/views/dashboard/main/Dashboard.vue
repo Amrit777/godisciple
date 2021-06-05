@@ -36,12 +36,12 @@
 
  <b-card
       
-      title="Menu"
+      title="Menu" class="menu-cardination"
       >
       <b-row>
        <b-col
-        lg="3"
-        sm="3"
+        lg="2"
+        sm="2"
         class="add-margin list-carding"
       >
 
@@ -50,12 +50,20 @@
 
 
         <b-col
-        lg="3"
-        sm="3"
+        lg="2"
+        sm="2"
         class="add-margin list-carding"
       >
 
        <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/instagram.jpg" class="classWithPad">
+       </b-col>
+       <b-col
+        lg="2"
+        sm="2"
+        class="add-margin list-carding"
+      >
+
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/blog.jpg"  class="classWithPad">
        </b-col>
 
       </b-row>
@@ -178,7 +186,7 @@ section#dashboard-analytics {
 section#dashboard-analytics .main-carousel {
     float: left;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     max-height: 350px;
     overflow: hidden;
     border-radius: 0.428rem;
@@ -251,7 +259,7 @@ section#dashboard-analytics .secondary-small-carousel .card-body {
 
 .image-video-listing .list-carding {
     margin: 10px 1%;
-    width: 23% !important;
+    width: 31.33% !important;
     max-width: none !important;
     border-radius: 0.428rem;
     overflow: hidden;
@@ -272,30 +280,42 @@ section#dashboard-analytics .secondary-small-carousel .card-body {
     max-width: 100%;
 }
 
-@media only screen and (max-width: 767px) {
-.secondary-small-carousel .card {max-height:140px;}
-section#dashboard-analytics .main-carousel .carousel-inner .carousel-item {border-radius:0.428rem; overflow:hidden;}
-  /**section#dashboard-analytics .main-carousel .carousel-inner {max-height: 140px;overflow: hidden;border-radius: 0.428rem;}**/
-  section#dashboard-analytics .main-carousel a.carousel-control-next,
-  section#dashboard-analytics .main-carousel a.carousel-control-prev {width:60px;}
-  .image-video-listing .col-sm-3 {width:48% !important; }
-  .secondary-small-carousel .card div#carousel-interval___BV_inner_ {height:100px;}
-  .image-video-listing .list-carding {max-height: 150px;}
-  section#dashboard-analytics .main-carousel .carousel-item {
-      min-height: 150px;
-  }
+.menu-cardination .card-body {
+    padding: 10px;
+}
 
-  section#dashboard-analytics .main-carousel .carousel-item img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  }
+.menu-cardination .card-body h4.card-title {
+    margin: 0 1% 3px;
+}
+
+.secondary-small-carousel {
+    float: left;
+    width: 100%;
 }
 
 button.slick-arrow {
     display: none !important;
 }
+
+@media only screen and (max-width: 767px) {
+    .secondary-small-carousel .card {max-height:140px;}
+    section#dashboard-analytics .main-carousel .carousel-inner .carousel-item {border-radius:0.428rem; overflow:hidden;}
+    section#dashboard-analytics .main-carousel a.carousel-control-next,
+    section#dashboard-analytics .main-carousel a.carousel-control-prev {width:60px;}
+    .image-video-listing .col-sm-3 {width:48% !important; }
+    .secondary-small-carousel .card div#carousel-interval___BV_inner_ {height:100px;}
+    .image-video-listing .list-carding {max-height: 100px;}
+    section#dashboard-analytics .main-carousel .carousel-item {min-height: 150px;}
+    section#dashboard-analytics .main-carousel .carousel-item img {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+    .image-video-listing {margin-top:15px !important;}
+}
+
+@media only screen and (max-width: 480px) {
+    section#dashboard-analytics .main-carousel .carousel-item {height:160px;}
+} 
+
+
+
 
 
 </style>
