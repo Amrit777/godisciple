@@ -1,13 +1,16 @@
 
 <template>
-<div class="row">
-       <div class="cell"><img :src="rowData.avatar" width='50' height='50'  /></div>
-  <div class="cell">{{ rowData.fullName}}</div>
-    <div class="cell">{{ rowData.startDate}}</div>
-    <div class="cell">{{ rowData.salary}}</div>
+<div class="bottom-branch">
+  <div class="row">
+  <div class="toggler"></div>
+         <div class="cell image"><img :src="rowData.avatar" width='50' height='50'  /></div>
+    <div class="cell">{{ rowData.fullName}}</div>
+      <div class="cell">{{ rowData.startDate}}</div>
+      <div class="cell">{{ rowData.salary}}</div>
 
-       <div class="cell">{{ rowData.email}}</div>
+         <div class="cell">{{ rowData.email}}</div>
 
+  </div>
 </div>
 </template>
 

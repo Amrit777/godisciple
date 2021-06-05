@@ -187,12 +187,15 @@
         </div>
       </b-col>
       <b-col lg="3" md="3"></b-col>
-      <b-col lg="12" sm="12" class="menu-list menu-customized">
-        <b-col lg="12" md="12">
-          <h2 class="content-header-title pr-1 mb-10">Menu</h2>
 
-          <b-row>
-            <b-col xl="2" md="4" sm="6">
+      <b-col
+            lg="12"
+            sm="12" class="credit-menus">
+        <b-card>
+          <div class="menu-list menu-customized">
+            <h4 class="card-title">Menu</h4>
+
+            <b-col xl="2" md="2" sm="4" class="menu-cardination">
               <b-card>
                 <div
                   class="video-container"
@@ -208,7 +211,7 @@
               </b-card>
             </b-col>
 
-            <b-col xl="2" md="4" sm="6">
+            <b-col xl="2" md="2" sm="4" class="menu-cardination">
               <b-card>
                 <div class="video-container">
                   <b-img
@@ -221,7 +224,7 @@
               </b-card>
             </b-col>
 
-            <b-col xl="2" md="4" sm="6">
+            <b-col xl="2" md="2" sm="4" class="menu-cardination">
               <b-card>
                 <div class="video-container">
                   <b-img
@@ -234,7 +237,7 @@
               </b-card>
             </b-col>
 
-            <b-col xl="2" md="4" sm="6">
+            <b-col xl="2" md="2" sm="4" class="menu-cardination">
               <b-card>
                 <div class="video-container">
                   <b-img
@@ -247,7 +250,7 @@
               </b-card>
             </b-col>
 
-            <b-col xl="2" md="4" sm="6">
+            <b-col xl="2" md="2" sm="4" class="menu-cardination">
               <b-card>
                 <div class="video-container">
                   <b-img
@@ -260,7 +263,7 @@
               </b-card>
             </b-col>
 
-            <b-col xl="2" md="4" sm="6">
+            <b-col xl="2" md="2" sm="4" class="menu-cardination">
               <b-card>
                 <div class="video-container">
                   <b-img
@@ -272,8 +275,8 @@
                 </div>
               </b-card>
             </b-col>
-          </b-row>
-        </b-col>
+          </div>
+        </b-card>
       </b-col>
     </b-row>
   </section>
@@ -442,7 +445,7 @@ span.video_title {
 }
 
 .menu-list.menu-customized .video-container img {
-  width: 100%;
+  width: 100%;min-height:80px;
 }
 
 .menu-list.menu-customized .video-container span.video_title {
@@ -476,7 +479,34 @@ span.video_title {
   background: linear-gradient(180deg, transparent, black);
 }
 
-@media only screen and (max-width: 600px) {
+.credit-menus .card-body {
+    padding: 15px 10px;
+}
+
+.credit-menus {
+    margin-top: 25px;
+}
+
+.credit-menus .menu-list.menu-customized {
+    margin: 0 !important;
+}
+
+.credit-menus .menu-cardination {
+    float: left;
+    width: 14.667%;
+    flex: none;
+    margin: 5px 1%;
+    padding: 0;
+    max-width: 100%;
+}
+
+.card h4.card-title {margin:0 1% 15px !important;}
+
+.credit-menus .menu-cardination .card {
+    margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
   .menu-list.menu-customized .col-sm-6 {
     max-width: 50%;
     padding: 0 0.5rem;
@@ -490,8 +520,9 @@ span.video_title {
     margin-bottom: 10px !important;
   }
 
-  .menu-list.menu-customized {
-    margin-top: 20px !important;
-  }
+  .credit-menus .menu-cardination { width:31.33% }
+
+  .credit-menus {margin-top:15px;}
+
 }
 </style>

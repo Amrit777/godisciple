@@ -186,7 +186,7 @@ section#dashboard-analytics {
 section#dashboard-analytics .main-carousel {
     float: left;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     max-height: 350px;
     overflow: hidden;
     border-radius: 0.428rem;
@@ -259,14 +259,14 @@ section#dashboard-analytics .secondary-small-carousel .card-body {
 
 .image-video-listing .list-carding {
     margin: 10px 1%;
-    width: 31.33% !important;
+    width: 14.667% !important;
     max-width: none !important;
     border-radius: 0.428rem;
     overflow: hidden;
     float: initial;
     display: inline-block;
     padding: 0;
-    max-height: 190px;
+    max-height: 100px;
     flex: none !important;
     text-align: center;
 }
@@ -308,6 +308,8 @@ button.slick-arrow {
     section#dashboard-analytics .main-carousel .carousel-item {min-height: 150px;}
     section#dashboard-analytics .main-carousel .carousel-item img {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
     .image-video-listing {margin-top:15px !important;}
+    .image-video-listing .list-carding { width:31.33% !important; }
+    section#dashboard-analytics .main-carousel  {margin-bottom:15px !important;}
 }
 
 @media only screen and (max-width: 480px) {
