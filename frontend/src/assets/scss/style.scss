@@ -664,7 +664,7 @@ section#dashboard-analytics .main-carousel .carousel-item video {
 }
 
 .image-video-listing {
-    margin-top: 30px !important;
+    margin-top: 25px !important;
 }
 
 
@@ -869,6 +869,23 @@ h2.top-heading {
     color: #fff;
 }
 
+.visibility-card .row {
+    padding: 0;
+}
+
+.visibility-card .tree-view .row {
+    margin: 0;
+}
+
+.bottom-branch .toggler {
+    min-width: 50px;
+}
+
+.bottom-branch  .cell.image {
+    max-width: 211px;
+}
+
+
 @media only screen and (max-width: 1024px) {
 	section.visibility-card .tab-content section#card-view .row.match-height {width:49%;}
 	.registeration-form .card-body { max-width:767px; padding:30px 15px}
@@ -881,22 +898,38 @@ h2.top-heading {
 	section#dashboard-analytics .main-carousel .carousel-inner .carousel-item img {height: 100%;}
 	section#dashboard-analytics .main-carousel .carousel-item img {height:100%;}
 	.secondary-small-carousel .slick-slide img {height:110px;}
-	.secondary-small-carousel .slick-track { max-height: 110px; overflow: hidden;}
-	.secondary-small-carousel .slick-track {max-height: 110px;overflow: hidden;}
+	.secondary-small-carousel .slick-track { max-height: 130px; overflow: hidden;}
 	.secondary-small-carousel .slick-slide {padding:0 5px;}
 	section.visibility-card .tab-content section#card-view .row.match-height {width:100%;}
 	.image-video-listing .list-carding img.classWithPad {width: 100%;}
 	.registeration-form form.auth-register-form .col-4,.registeration-form form.auth-register-form .col-6 ,.registeration-form .col-6 {max-width: 100%;flex: none;}
 	b.label-title:before ,b.label-title:after {width:37%;}
 	.registeration-form form.auth-register-form a.btn,.registeration-form form.auth-register-form button.btn {margin-bottom: 10px;min-height: 40px;line-height: 15px;}
+  .menu-list.menu-customized .col-sm-6 {max-width: 33.33%;}
+  .table-wrapper {float: left;width: 100%;overflow-x: scroll;padding: 10px;border-radius: 0.428rem;}
+  .table-wrapper .table {min-width: 700px;margin: 0;}
+  .dark-layout .table-wrapper {background: #283046;}
+  .bottom-branch .toggler {min-width:40px;}
+  .bottom-branch .cell.image {max-width: 7.4rem;}
+}
+
+
+@media only screen and (max-width: 600px) {
+  .menu-list.menu-customized .row .col-sm-6 {max-width: 33.33%;}  
+}
+
+@media only screen and (max-width: 576px) {
+  .menu-customized .menu-cardination {max-width:33.33%;flex:0 0 33.3333333333%;padding:0 5px;}
 }
 
 
 @media only screen and (max-width: 480px) {
+  .bottom-branch .cell.image {max-width: 6.5rem;}
 	.creditcard-custom .card-list .card-item {max-width: 430px;width: 100%;}
 	.creditcard-custom .wrapper {padding:0;}
-	.secondary-small-carousel .slick-slide {max-width:260px;height:100px;}
-	.secondary-small-carousel .slick-slide img{width:100%;height:100px;}
+	.secondary-small-carousel .slick-slide {max-width:350px;height:100px;}
+	.secondary-small-carousel .slick-slide img{width:100%;height:130px;}
 	section.visibility-card .tab-section ul.nav a.nav-link {padding:13px 30px;}
 	b.label-title:before ,b.label-title:after {width:32%;}
+
 }

@@ -1,5 +1,5 @@
 <template>
-
+<div class="main-branch">
   <div class="row">
       
        <div
@@ -26,7 +26,7 @@
       <div class="cell">{{ rowData.email}}</div>
 
   </div>
-
+</div>
     
 </template>
 

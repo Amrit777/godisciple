@@ -1,9 +1,9 @@
 <template>
+<div class="table-wrapper">
   <tree-table
           class="table"
           :table-data="tableData" 
           >
-
  <template #headerTemplate="headerProps">
                 <table-header v-bind="headerProps" />
             </template>
@@ -27,6 +27,8 @@
               
             </template>
   </tree-table>
+</div> 
+  
 </template>
 
 <script>

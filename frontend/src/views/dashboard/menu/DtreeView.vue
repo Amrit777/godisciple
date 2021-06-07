@@ -26,7 +26,7 @@
             </b-tab>
 
             <!-- Tab: Information -->
-            <b-tab>
+            <b-tab class="tree-view">
               <template #title>
                 <span class="tab-title-custom">Tree View</span>
               </template>
