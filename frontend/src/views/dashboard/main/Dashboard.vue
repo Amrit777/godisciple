@@ -15,6 +15,7 @@
 
       <div>
     <VueSlickCarousel v-bind="settings">
+        
       <div> <img alt="" title="" height="300"  src="http://www.abfoodnutrition.co.uk/wp-content/uploads/2015/02/Small-Business-Saturday-UK-Facebook-Banner-2015.jpg"  class="classWithPad">
       </div>
       <div> <img alt="" title="" height="300" src="https://godisciples.id/menu/assets/images/faq.png"  class="classWithPad">

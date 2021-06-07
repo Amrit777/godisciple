@@ -2,23 +2,34 @@ export default [
   // {
   //   header: 'Apps & Pages',
   // },
-  // {
-  //   title: 'Dtree',
-  //   icon: 'MenuIcon',
-  //   children: [
-  //     {
-  //       title: 'List',
-  //       route: 'apps-menu-home',
-  //     },
-      
-  //   ],
-  // },
-
   {
     title: 'Dtree',
-    route: 'apps-menu-home',
-    icon: 'MenuIcon',
+    icon: 'FileTextIcon',
+    children: [
+      {
+        title: 'List',
+        route: 'apps-menu-home',
+      },
+
+      {
+        title: 'View',
+        route: 'apps-menu-view',
+      },
+      
+    ],
   },
+
+  // {
+  //   title: 'Details',
+  //   route: 'apps-menu-home',
+  //   icon: 'FileTextIcon',
+  // },
+
+  // {
+  //   title: 'Dtree',
+  //   route: 'apps-menu-view',
+  //   icon: 'CircleIcon',
+  // },
   
   {
     title: 'Invite',

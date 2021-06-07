@@ -70,6 +70,18 @@
             >
           </template>
         </b-carousel-slide>
+
+         <b-carousel-slide>
+          <template #img>
+            <img
+              class="d-block img-fluid w-100 revolution-slider-height"
+              width="924"
+              height="380"
+              :src="image4"
+              alt="image slot"
+            >
+          </template>
+        </b-carousel-slide>
       </b-carousel>
     </div>
 </template>
@@ -92,8 +104,9 @@ export default {
       sliding: null,
       codeVsupport,
       image1:"http://www.abfoodnutrition.co.uk/wp-content/uploads/2015/02/Small-Business-Saturday-UK-Facebook-Banner-2015.jpg",
-      image2:"https://tpc.googlesyndication.com/simgad/5928956687406861336?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4ql3p1EjsiMsykgDyLj4Oi9N7DTv0g", 
-      image3:"https://godisciples.id/menu/assets/images/faq.png"
+      image2:"https://i.pinimg.com/originals/66/d9/bd/66d9bddd1cdf54bed0fa65a9204e65f7.png", 
+      image3:"https://godisciples.id/menu/assets/images/faq.png",
+      image4:"https://www.circleone.in/images/products_gallery_images/Event-Banners86.jpg"
     }
   },
   methods: {

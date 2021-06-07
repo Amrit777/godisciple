@@ -10,9 +10,15 @@
       <h2 class="top-heading">Register</h2>
 
 <b-row class="image-uploading">
-    <b-col cols="6">        
-      
- <div class="upload-example">
+         
+      <b-modal
+      id="modal-prevent-closing"
+      ref="my-modal"
+      title="Submit Your Name"
+      ok-title="Submit"
+      cancel-variant="outline-secondary"
+    >
+    <div class="upload-example">
 		<cropper
 			class="upload-example-cropper"
 			:src="image"
@@ -21,6 +27,7 @@
 
 		/>
 		<div class="button-wrapper">
+     
 			<span class="button" @click="$refs.file.click()">
 				<input type="file" ref="file" @change="loadImage($event)" accept="image/*">
 				Load image
@@ -32,7 +39,10 @@
 			</span>
 		</div>
 	</div>
-</b-col>  
+     
+    </b-modal>
+     
+
 
  <b-col cols="6">        
       
@@ -45,6 +55,15 @@
 	/>
 
    </div>
+   <b-button
+      id="toggle-btn"
+      v-ripple.400="'rgba(113, 102, 240, 0.15)'"
+      v-b-modal.modal-prevent-closing
+      variant="outline-primary"
+    >
+     Upload Image
+    </b-button>
+ 
 </b-col>  
 
   </b-row>
@@ -539,7 +558,9 @@ import {
   BCol,
   BFormDatepicker,
   BFormSelect,
-  BFormTextarea
+  BFormTextarea,
+  BModal, 
+  VBModal
 } from 'bootstrap-vue'
 import VuexyLogo from '@core/layouts/components/Logo.vue'
 import { required, email } from '@validations'
@@ -576,6 +597,7 @@ export default {
     // validations
     ValidationProvider,
     ValidationObserver,
+    BModal, VBModal,
   },
   mixins: [togglePasswordVisibility],
   data() {

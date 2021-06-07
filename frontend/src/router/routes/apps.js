@@ -260,6 +260,10 @@ export default [
     name: 'apps-menu-list',
     component: () => import('@/views/dashboard/menu/DtreeList.vue'),
   },
-
+  {
+    path: '/dahsboard/dtree/edit',
+    name: 'apps-menu-edit',
+    component: () => import('@/views/dashboard/menu/DtreeEdit.vue'),
+  },
 
 ]

@@ -59,6 +59,9 @@
         <b-button class="edit"
           v-ripple.400="'rgba(113, 102, 240, 0.15)'"
           variant="outline-primary"
+
+          @click="$router.push({name:'apps-menu-edit'})"
+
         >
           Edit Profile
         </b-button>
@@ -66,6 +69,8 @@
          <b-button class="member-view"
           v-ripple.400="'rgba(113, 102, 240, 0.15)'"
           variant="outline-primary"
+          
+          @click="$router.push({name:'apps-menu-edit'})"
         >
          View Member
         </b-button>
