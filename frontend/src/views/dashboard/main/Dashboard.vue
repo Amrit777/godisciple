@@ -16,12 +16,12 @@
       <div>
     <VueSlickCarousel v-bind="settings">
         
-      <div> <img alt="" title="" height="300"  src="http://www.abfoodnutrition.co.uk/wp-content/uploads/2015/02/Small-Business-Saturday-UK-Facebook-Banner-2015.jpg"  class="classWithPad">
+      <div> <img alt="" title="" height="300"  src="https://rukminim1.flixcart.com/flap/960/960/image/084789479074d2b2.jpg?q=50"  class="classWithPad">
       </div>
-      <div> <img alt="" title="" height="300" src="https://godisciples.id/menu/assets/images/faq.png"  class="classWithPad">
+      <div> <img alt="" title="" height="300" src="https://rukminim1.flixcart.com/flap/960/960/image/2f30db9425df5cec.jpg?q=50"  class="classWithPad">
         </div>
 
-        <div> <img alt="" title="" height="300"  src="https://godisciples.id/menu/assets/images/faq.png"  class="classWithPad">
+        <div> <img alt="" title="" height="300"  src=""  class="classWithPad">
         </div>
     
     </VueSlickCarousel>
@@ -105,6 +105,9 @@ export default {
       data: {
 
         image1:require('@/assets/images/slider/01.jpg'),
+        image11:require('@/assets/images/slider/11.jpg'),
+        image12:require('@/assets/images/slider/12.jpg'),
+        image13:require('@/assets/images/slider/13.jpg'),
 
       },
       settings:{
