@@ -21,8 +21,6 @@
       <div> <img alt="" title="" height="300" src="https://rukminim1.flixcart.com/flap/960/960/image/2f30db9425df5cec.jpg?q=50"  class="classWithPad">
         </div>
 
-        <div> <img alt="" title="" height="300"  src=""  class="classWithPad">
-        </div>
     
     </VueSlickCarousel>
   </div>
@@ -40,6 +38,58 @@
       title="Menu" class="menu-cardination"
       >
       <b-row>
+       <b-col
+        lg="2"
+        sm="2"
+        class="add-margin list-carding"
+      >
+
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/blog.jpg"  class="classWithPad">
+       </b-col>
+
+
+        <b-col
+        lg="2"
+        sm="2"
+        class="add-margin list-carding"
+      >
+
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/instagram.jpg" class="classWithPad">
+       </b-col>
+       <b-col
+        lg="2"
+        sm="2"
+        class="add-margin list-carding"
+      >
+
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/blog.jpg"  class="classWithPad">
+       </b-col>
+       <b-col
+        lg="2"
+        sm="2"
+        class="add-margin list-carding"
+      >
+
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/blog.jpg"  class="classWithPad">
+       </b-col>
+
+
+        <b-col
+        lg="2"
+        sm="2"
+        class="add-margin list-carding"
+      >
+
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/instagram.jpg" class="classWithPad">
+       </b-col>
+       <b-col
+        lg="2"
+        sm="2"
+        class="add-margin list-carding"
+      >
+
+       <img alt="" title="" src="https://godisciples.id/assets/gkdi-img/new/blog.jpg"  class="classWithPad">
+       </b-col>
        <b-col
         lg="2"
         sm="2"

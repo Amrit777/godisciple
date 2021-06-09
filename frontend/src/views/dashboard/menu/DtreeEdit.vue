@@ -2,7 +2,7 @@
   <div>
       <b-card>
    <b-form>
-      <b-row>
+      <b-row class="edit-form">
 
            <b-col
           cols="12"
