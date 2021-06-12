@@ -923,6 +923,54 @@ section#dashboard-analytics .main-carousel .revolution-slider-height {height:100
     content: none;
 }
 
+ul.accordion-collapsable {
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 0;
+}
+
+ul.accordion-collapsable li {
+    margin-bottom: 10px;
+    background: #283046;
+    border-radius: 0.428rem;
+}
+
+ul.accordion-collapsable li button {
+    padding: 10;
+}
+
+ul.accordion-collapsable li button.btn.btn-primary {
+    padding: 15px;
+    background: transparent !important;
+    border: none;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    box-shadow: none !important;
+}
+
+ul.accordion-collapsable li button:after {content: '';position: absolute;height: 8px;width: 8px;border: 1px solid;border-width: 0px 2px 2px 0px;right: 15px;top: 15px;transform: rotate(45deg);}
+
+ul.accordion-collapsable li .collapse {
+    margin: 0 !important;
+    padding: 15px;
+    border-top: 1px solid;
+}
+
+ul.accordion-collapsable li .collapse .card-body {
+    padding: 0;
+}
+
+ul.accordion-collapsable li .collapse .card {
+    margin: 0;
+}
+
+section#dashboard-analytics .main-carousel .carousel-item:hover,
+.secondary-small-carousel .slick-slide img {opacity: 0.8;}
+
+section#dashboard-analytics .main-carousel .carousel-item,
+.secondary-small-carousel .slick-slide:hover img {transition:0.4s ease-in-out}
+
 
 @media only screen and (max-width: 1024px) {
 	section.visibility-card .tab-content section#card-view .row.match-height {width:49%;}

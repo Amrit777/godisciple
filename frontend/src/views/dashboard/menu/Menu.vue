@@ -278,18 +278,49 @@
           </div>
         </b-card>
       </b-col>
+
+  <b-col
+            lg="12"
+            sm="12" class="faq-section">
+            FAQ
+
+           <ul class="accordion-collapsable">
+            <li>
+              <b-button @click="collapse.show = !collapse.show" variant="primary">Toggle Collapse</b-button>
+              <b-collapse v-model="collapse.show" id="collapse-1" class="mt-2">
+                  <b-card>
+                    <p class="card-text">Collapse  contents Here</p>
+                  </b-card>
+              </b-collapse>
+            </li>
+            <li>
+              <b-button @click="collapse.show = !collapse.show" variant="primary">Toggle Collapse</b-button>
+              <b-collapse v-model="collapse.show" id="collapse-1" class="mt-2">
+                  <b-card>
+                    <p class="card-text">Collapse  contents Here</p>
+                  </b-card>
+              </b-collapse>
+            </li>
+          </ul>
+
+
+
+</b-col>
     </b-row>
   </section>
 </template>
 
 <script>
-import { BRow, BCol, BCard, BImg } from "bootstrap-vue";
+import { BRow, BCol, BCard, BImg,BButton,BCollapse } from "bootstrap-vue";
 export default {
   components: {
     BRow,
     BCol,
     BCard,
     BImg,
+    BButton,
+    BCollapse
+
   },
   data() {
     return {
@@ -308,6 +339,9 @@ export default {
       isCardFlipped: false,
       focusElementStyle: null,
       isInputFocused: false,
+       collapse: {
+       show :false
+       }
     };
   },
   mounted() {
